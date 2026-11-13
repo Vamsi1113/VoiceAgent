@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Companion — Personal AI Assistant</title>
+    <meta name="description" content="Personal AI voice agent with 3D avatar" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Import map: resolve bare "three" and "three/addons/*" for TalkingHead locally (0ms, 100% offline) -->
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "/lib/three/three.module.js",
+        "three/addons/": "/lib/three/addons/"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

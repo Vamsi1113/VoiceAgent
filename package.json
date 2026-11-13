@@ -1,0 +1,32 @@
+{
+  "name": "companion",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Personal AI voice agent with 3D avatar",
+  "scripts": {
+    "dev": "concurrently -n gateway,web -c cyan,magenta \"npm --prefix apps/gateway run dev\" \"npm --prefix apps/web run dev\"",
+    "build": "node scripts/build.js",
+    "test": "vitest run --config vitest.config.ts",
+    "test:integration": "vitest run --config tests/integration/vitest.config.ts",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc -b",
+    "pair:first": "node --env-file=.env apps/gateway/dist/cli/pair-first.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "concurrently": "^9.1.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  }
+}
+

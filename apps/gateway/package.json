@@ -1,0 +1,35 @@
+{
+  "name": "@companion/gateway",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=../../.env dist/index.js",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "pair:first": "node --env-file=../../.env dist/cli/pair-first.js",
+    "start": "node --env-file=../../.env dist/index.js"
+  },
+  "dependencies": {
+    "@companion/core": "workspace:*",
+    "@companion/memory": "workspace:*",
+    "@companion/protocol": "workspace:*",
+    "@companion/providers": "workspace:*",
+    "@fastify/cors": "^10.0.0",
+    "@fastify/rate-limit": "^10.0.0",
+    "@fastify/websocket": "^11.0.0",
+    "fastify": "^5.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "pino": "^9.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/jsonwebtoken": "^9.0.0",
+    "@types/ws": "^8.5.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
+
